@@ -1,0 +1,120 @@
+<html>
+    <head><title>modal</title></head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrlty="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrlty="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrlty="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrlty="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <style>
+      body{
+        height: 500px;
+      }
+    .topic{
+      font-size: 18px;
+      font-weight: 600;
+      color:#265df2;
+    }
+    .text-boxes .text-box {
+      height: 80%;
+      width: 100%;
+      /*padding: 30px;
+      font-size: 15px;
+      font-weight: 400;
+      outline: none;
+      border: 1px solid #265df2;
+      border-radius: 8px;
+      background: #e7edfe;*/
+    }
+    textarea{
+      height: 89%;
+      width: 100%;
+      padding: 30px;
+      font-size: 15px;
+      font-weight: 400;
+      outline: none;
+      border: 1px solid #265df2;
+      border-radius: 8px;
+      background: #e7edfe;
+    }
+    .text-box textarea::-webkit-scrollbar{
+      display: none;
+    }
+    .modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+    height: 440px;
+}
+ .vb-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color:#265df2;
+    }
+    .vb-textarea{
+      width: 100%;
+      padding: 30px;
+      font-size: 15px;
+      font-weight: 400;
+      outline: none;
+      border: 1px solid #265df2;
+      border-radius: 8px;
+      background: #e7edfe;
+    }
+    .vb-textarea::-webkit-scrollbar{
+      display: none;
+    }
+    .vb-model-body {
+    overflow-y: auto;
+    height: 60vh;
+    }
+</style>
+    <body>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch Source Code
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+         <!--h5 class="modal-title" id="exampleModalLabel">Source Code</h5-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body vb-model-body">
+          <div class="text-boxes">
+           <div class="card">
+          <div class="card-body vb-card-body">
+          <h5 class="card-title vb-card-title">Source Code:</h5>
+        <textarea id="HTMLBox" readonly rows="10" class="vb-textarea">   
+            
+            &lt;a class="twitter-timeline" data-width="220" data-height="400" data-theme="dark" href="https://twitter.com/duskycheek?ref_src=twsrc%5Etfw"&gt;Tweets by TwitterDev&lt;/a&gt; 
+            &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+        </textarea> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="HTMLButton">Copy Codes</button>
+        
+ 
+        
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+let HTMLBox = document.getElementById("HTMLBox");
+    let HTMLButton = document.getElementById("HTMLButton");
+
+    HTMLButton.onclick = function() {
+      HTMLBox.select();
+      document.execCommand("copy");
+      HTMLButton.innerText = "Codes Copied"
+    }
+</script>
+
+
+</body>
+  </html>
